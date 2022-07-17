@@ -2,7 +2,7 @@ name: Deployment
 
 on:
   push:
-    branches: [hexo] # only push events on source branch trigger deployment
+    branches: [master] # only push events on source branch trigger deployment
 
 jobs:
   hexo-deployment:
@@ -31,9 +31,9 @@ jobs:
         gulp
         
     - name: Publish
-       uses: peaceiris/actions-gh-pages@v3
-       with:
-          github_token: ${{ secrets.GH_TOKEN }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: main
           publish_dir: ./public
           user_name: 'github-actions[bot]'
