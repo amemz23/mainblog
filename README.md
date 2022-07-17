@@ -1,2 +1,0 @@
-# mainblog
-simple
