@@ -29,7 +29,6 @@ jobs:
         npm i
         hexo clean
         hexo g
-        gulp
         
     - name: Publish
       uses: peaceiris/actions-gh-pages@v3
